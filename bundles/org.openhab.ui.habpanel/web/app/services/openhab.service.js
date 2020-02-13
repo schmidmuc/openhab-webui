@@ -34,7 +34,7 @@
                 $timeout($rootScope.$emit('openhab-update'));
             }
 
-            $http.get('/rest/items')
+            $http.get('/rest/items?tags=panel-filter')
             .then(function (data) {
                 if (angular.isArray(data.data)) {
                     console.log("Loaded " + data.data.length + " openHAB items");
